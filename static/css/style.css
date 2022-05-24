@@ -1,0 +1,185 @@
+@font-face {
+    font-family: ITC Avant Garde Gothic Std;
+    src: url("../fonts/ITCAvantGardeStd-XLt.otf");
+}
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+span{
+    display: block;
+}
+img {
+    object-fit: cover;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.banner:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1;
+}
+
+.banner img,.banner .images{
+    width: 100%;
+    height: 100%;
+}
+
+.section{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    height: 100%;
+}
+.mobile_images,.mobile_images{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.section .warp{
+    width: 100%;
+    margin: 100px auto 0;
+}
+.section .warp .search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 700px;
+    height: 46px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 25px;
+    padding: 0 30px;
+}
+.section .warp .search input{
+    width: 96%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    line-height: 46px;
+}
+.section .warp .search input::placeholder{
+    font-size: 16px;
+    line-height: 46px;
+}
+.section .warp .search .click{
+    cursor: pointer;
+}
+.section .warp .search svg{
+    width: 25px;
+    fill: rgb(22, 131, 216);
+}
+.section .warp .time{
+    font-size: 36px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+    cursor: pointer;
+    font-family: ITC Avant Garde Gothic Std;
+}
+.section .warp .recommend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+.section .warp .recommend .item{
+    margin-right: 70px;
+    text-align: center;
+}
+.section .warp .recommend .item:last-child{
+    margin-right: 0;
+}
+.section .warp .recommend .item .images{
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    margin: auto;
+}
+.section .warp .recommend .item .images .iconfont{
+    font-size: 27px;
+}
+.section .warp .recommend .item .images .color{
+    width: 30px;
+    height: 30px;
+    background: #090;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #fff;
+    font-weight: bold;
+}
+.section .warp .recommend .item .images img{
+    width: 83%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.section .warp .recommend .item p{
+    color: #fff;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+.section .warp .ajax{
+    width: fit-content;
+    margin: 400px auto;
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 50px;
+    transition: 1s;
+}
+.section .warp .ajax:hover{
+    background: rgba(245, 245, 245, 0.1);
+    backdrop-filter: blur(5px);
+}
+@media screen and (max-width: 768px) {
+    .section .warp .search{
+        width: 70%;
+    }
+    .banner .mobile{
+        display: block;
+    }
+    .section .warp .recommend{
+        display: none;
+    }
+    .banner .images{
+        display: none;
+    }
+    .mobile_images,.mobile_images{
+        display: block;
+    }
+    .section .warp .ajax{
+        width: 75%;
+        background: rgba(245, 245, 245, 0.1);
+        backdrop-filter: blur(5px);
+    }
+}
